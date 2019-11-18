@@ -1,0 +1,26 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "AND":[
+                {
+                    "IS": {
+                        "courses_instructor":"*ind*"
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_dept":"*dhe"
+                    }
+                }
+            ]},
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_instructor"
+            ],
+            "ORDER": "courses_dept"
+        }
+    },
+    "isQueryValid": true,
+    "result":[]}

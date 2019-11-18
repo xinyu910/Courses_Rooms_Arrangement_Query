@@ -1,0 +1,20 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "AND":[
+                {
+                    "IS": {
+                        "cour_ses_instructor":"*ind*"
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_instructor":"dave"
+                    }
+                }
+            ]},
+        "OPTIONS": 0
+    },
+    "isQueryValid": false,
+    "result": "InsightError"}

@@ -1,0 +1,35 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "AND": [{
+                "IS": {
+                    "rooms_furniture": "*les*"
+                }
+            }, {
+                "GT": {
+                    "rooms_seats": 400
+                }
+            }]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_lon",
+                "maxSeats"
+            ],
+            "ORDER": {
+                "dir": "UP",
+                "keys": ["maxSeats", "rooms_lon"]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": ["rooms_shortname", "rooms_lon"],
+            "APPLY": [{
+                "maxSeats": {
+                    "MIN": "rooms_lon"
+                }
+            }]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"rooms_lon":-123.24467,"maxSeats":-123.24467}]}

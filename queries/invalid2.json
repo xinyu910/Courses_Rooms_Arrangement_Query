@@ -1,0 +1,16 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "EQ": {
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_pass"
+            ]
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"}

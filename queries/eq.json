@@ -1,0 +1,17 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "EQ": {
+                "courses_avg":97
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_pass"
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"courses_dept":"crwr","courses_pass":1},{"courses_dept":"epse","courses_pass":8},{"courses_dept":"psyc","courses_pass":1}]}

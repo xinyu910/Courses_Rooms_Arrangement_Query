@@ -1,0 +1,30 @@
+{
+    "title": "SELECT dept, avg WHERE avg > 97",
+    "query": {
+        "WHERE": {
+            "GT": {
+                "courses_avg": 98
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "COUNT",
+                "courses_uuid"
+            ]
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "courses_title",
+                "courses_uuid"
+            ],
+            "APPLY": [
+                {
+                    "COUNT": {
+                        "COUNT": "courses_uuid"
+                    }
+                }
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result":[{"COUNT":1,"courses_uuid":"26777"},{"COUNT":1,"courses_uuid":"10235"},{"COUNT":1,"courses_uuid":"10236"},{"COUNT":1,"courses_uuid":"33779"},{"COUNT":1,"courses_uuid":"33780"},{"COUNT":1,"courses_uuid":"33781"},{"COUNT":1,"courses_uuid":"6320"},{"COUNT":1,"courses_uuid":"29255"},{"COUNT":1,"courses_uuid":"29256"},{"COUNT":1,"courses_uuid":"44816"},{"COUNT":1,"courses_uuid":"44817"},{"COUNT":1,"courses_uuid":"49677"},{"COUNT":1,"courses_uuid":"49678"},{"COUNT":1,"courses_uuid":"5373"},{"COUNT":1,"courses_uuid":"5374"},{"COUNT":1,"courses_uuid":"15343"},{"COUNT":1,"courses_uuid":"15344"},{"COUNT":1,"courses_uuid":"73638"},{"COUNT":1,"courses_uuid":"73639"},{"COUNT":1,"courses_uuid":"88151"},{"COUNT":1,"courses_uuid":"88152"},{"COUNT":1,"courses_uuid":"96250"},{"COUNT":1,"courses_uuid":"96251"},{"COUNT":1,"courses_uuid":"65069"},{"COUNT":1,"courses_uuid":"65070"}]}
